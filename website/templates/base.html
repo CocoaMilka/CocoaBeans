@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CocoaBeans</title>
+    <title>{% block title %}Home{% endblock %}</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +9,30 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"
     {% block head %}{% endblock %}
 </head>
+
+
 <body>
     <!-- Header -->
     <div class="header">
-        <h1>CocoaBeans</h1>
+        <table>
+            <tr>
+                <td><img src="../static/Cocoa_Beans.png" width="100"></td>   <td><h1>CocoaBeans</h1></td>
+            </tr>
+
+            <tr>
+                <nav>
+                    <div>
+                        <a id="home" href="/">Home</a>
+                        <a id="signUp" href="/sign-up">Sign Up</a>
+                        <a id="login" href="/login">Login</a>
+                        <a id="logout" href="/logout">Logout</a> 
+                    </div> 
+                </nav>
+            </tr>
+        </table>
     </div>
+
+
 
     <!-- inserted from extended pages, reference index.html for more info :3 -->
     {% block body %}{% endblock %}

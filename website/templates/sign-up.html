@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block title %}Sign Up{% endblock %}
+
 {% block body %}
 <div class="content">
     <center><h1>Create an account</h1></center>
@@ -17,21 +19,25 @@
 
     <div class="login-form">
         <form action="/" method="POST">
-            <p>Username:</p>
-            <input type="text" name="user_name" id="user_name">
-            <br>
-            <p>Password:</p>
-            <input type="text" name="user_pass" id="user_pass">
-            <br>
-            <br>
-            <input type="submit" value="Register">
-            <input type="submit" value="Login">
-        </form>
+            <h3 align="center">Sign Up</h3>
 
-        <br>
-        <div class="error-box">
-            <p>Username already taken</p>
-        </div>
+            <label for="user_name">Username:</label>
+            <input type="text" name="user_name" id="user_name">
+
+            <br><br>
+
+            <label for="user_pass1">Password:</label>
+            <input type="password" name="user_pass" id="user_pass1">
+
+            <br><br>
+
+            <label for="user_pass2">Confirm Password:</label>
+            <input type="password" name="user_pass2" id="user_pass2">
+
+            <br><br>
+
+            <input type="submit" value="Register">
+        </form>
     </div>
 
 </div>

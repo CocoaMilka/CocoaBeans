@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+<div class="content">
+    <center><h1>Create an account</h1></center>
+
+    <table>
+        <!-- Show users in database -->
+        {% for user in users %}
+            <tr>
+                <td>{{ user.username }}</td>
+                <td>{{ user.password }}</td>
+                <td>{{ user.isCommissioner }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <div class="login-form">
+        <form action="/" method="POST">
+            <h3 align="center">Log In</h3>
+
+            <label for="user_name">Username:</label>
+            <input type="text" name="user_name" id="user_name">
+
+            <br><br>
+
+            <label for="user_pass">Password:</label>
+            <input type="password" name="user_pass" id="user_pass">
+
+            <br><br>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+</div>
+{% endblock %}
