@@ -1,5 +1,6 @@
-from flask import Blueprint, render_template, request, flash
+from flask import Blueprint, render_template, request, flash, jsonify
 from flask_login import login_required, current_user
+import json
 
 from .models import Commission
 from . import db
@@ -27,3 +28,15 @@ def home():
             flash('Commission added!', category='success')
 
     return render_template("index.html", user=current_user)
+
+@views.route('/delete-commission', methods=['POST'])
+def delete_commission():
+    commission = json.loads(request.data)
+    commissionID = commission['commissionID']
+    commission = Commission.query.get(commissionID)
+    if commission:
+        if commission.commissioner == current_user.id:
+            db.session.delete(commission)
+            db.session.commit()
+            
+    return jsonify({})
