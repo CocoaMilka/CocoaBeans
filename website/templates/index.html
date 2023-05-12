@@ -4,6 +4,40 @@
 
 {% block body %}
 
-<h1>test</h1>
+<h1 align="center">Commissions</h1>
+
+<div class="commission-list">
+    <center><h3>Your Commissions:</h3></center>
+    <ul id="Commissions">
+        {% for commission in user.commissions %}
+        <li>{{ commission.title }} $ {{ commission.price }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+<div class="commission-form">
+    <form method="POST">
+        <center><h3>Add a new Commission</h3></center>
+        <br>
+
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" placeholder="Commission Title">
+
+        <label for="price">Price:</label>
+        <input type="price" name="price" id="price" placeholder="Integer in USD">
+
+        <br><br>
+
+        <center><label>Commission Description</label></center>
+        <br>
+        <textarea name="description" id="description">
+        </textarea>
+
+        <br><br>
+
+        <center><input type="submit" value="Submit"></center>
+    </form>
+</div>
 
 {% endblock %}
