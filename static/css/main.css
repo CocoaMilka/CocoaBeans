@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Coolvetica'; /*a name to be used later*/
+    src: url('../../assets/coolvetica.otf'); /*URL to font*/
+}
+
+* {
+	font-family: Coolvetica;
+}
+
+body {
+	margin: 0;
+	background: rgb(199,169,165);
+	background: linear-gradient(90deg, rgba(199,169,165,1) 0%, rgba(244,219,216,1) 50%, rgba(199,169,165,1) 100%);
+}
+
+.login-form {
+    position: fixed;
+    text-align: center;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error-box{
+    background-color: rgb(255, 62, 62);
+    color: white;
+    padding: 1px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.header {
+    background: linear-gradient(0deg, rgba(88,44,44,1) 0%, rgba(147,80,81,1) 69%);
+    text-align: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.footer {
+    background: linear-gradient(0deg, rgba(88,44,44,1) 0%, rgba(147,80,81,1) 69%);
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
