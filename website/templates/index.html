@@ -4,24 +4,26 @@
 
 {% block body %}
 
-<div>
-    <h1 align="center">Welcome, {{ user.username }}</h1>
-</div>
+<br>
+<center><h1>Welcome, {{ user.username }}!</h1></center>
 
 <div class="commission-list">
-    <center><h3>Your Commissions:</h3></center>
-    <ul id="Commissions">
-        {% for commission in user.commissions %}
-        <div>
-            <li>{{ commission.title }} $ {{ commission.price }}</li>
-            <button type="button" onClick="deleteCommission({{ commission.id }})">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        {% endfor %}
-    </ul>
+    <center><h3>Your Commissions:</h3></center>  
+    <table>
+        <tr>
+            {% for commission in user.commissions %}
+            <td style="padding: 10px;">
+                {{ commission.title }} ${{ commission.price }}
+                <button type="button" onClick="deleteCommission({{ commission.id }})">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <br>
+                {{ commission.description }}
+            </td>
+            {% endfor %}
+        </tr>
+    </table>
 </div>
-
 
 <div class="commission-form">
     <form method="POST">

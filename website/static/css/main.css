@@ -9,6 +9,7 @@
 }
 
 body {
+    padding-top: 200px;
 	margin: 0;
 	background: rgb(199,169,165);
 	background: linear-gradient(90deg, rgba(199,169,165,1) 0%, rgba(244,219,216,1) 50%, rgba(199,169,165,1) 100%);
@@ -38,17 +39,17 @@ body {
     padding: 20px;
     position: fixed;
     display: table;
-
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
 .commission-list {
+    background-color: rgb(206, 124, 126);
     position: fixed;
     top: 70%;
     left: 50%;
-    transform: translate(-70%, -50%);
+    transform: translate(-50%, -40px);
 }
 
 .error-box{
