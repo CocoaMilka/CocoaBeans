@@ -80,6 +80,7 @@ nav {
 
 a {
     color: black;
+    padding-inline: 10px;
 }
 
 a:visited {
