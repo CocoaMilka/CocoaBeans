@@ -1,10 +1,11 @@
 @font-face {
     font-family: 'Coolvetica'; /*a name to be used later*/
-    src: "{{ url_for('static', filename='coolvetica.otf') }}"
+    src: url(coolvetica.otf);
 }
 
 * {
 	font-family: Coolvetica;
+    font-weight: lighter;
 }
 
 body {
@@ -72,6 +73,23 @@ body {
     z-index: 1;
 }
 
+nav {
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+a {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: rgb(206, 124, 126);
+}
+
 .footer {
     background: linear-gradient(0deg, rgba(88,44,44,1) 0%, rgba(147,80,81,1) 69%);
     text-align: center;
@@ -88,7 +106,7 @@ body {
     z-index: 2;
     position: fixed;
     width: 100%;
-    top: 130px;
+    top: 220px;
 }
 
 .flash-success {
@@ -98,7 +116,7 @@ body {
     z-index: 2;
     position: fixed;
     width: 100%;
-    top: 130px;
+    top: 220px;
 }
 
 .inputwrap label {

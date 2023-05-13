@@ -14,25 +14,23 @@
 <body>
     <!-- Header -->
     <div class="header">
-        <table>
-            <tr>
-                <td><img src="../static/Cocoa_Beans.png" width="100"></td>   <td><h1>CocoaBeans</h1></td>
-            </tr>
+        <span>
+            <td><img src="../static/Cocoa_Beans.png" width="100"></td>   <td><h1>CocoaBeans</h1></td>
+        </span>
 
-            <tr>
-                <nav>
-                    <div>
-                        {% if user.is_authenticated %}
-                        <a id="home" href="/">Home</a>
-                        <a id="logout" href="/logout">Logout</a> 
-                        {% else %}
-                        <a id="signUp" href="/sign-up">Sign Up</a>
-                        <a id="login" href="/login">Login</a>
-                        {% endif %}
-                    </div> 
-                </nav>
-            </tr>
-        </table>
+        <span>
+            <nav>
+                {% if user.is_authenticated %}
+                <a id="home" href="/">Home</a>
+                <a id="logout" href="/logout">Logout</a> 
+                {% else %}
+                <a id="signUp" href="/sign-up">Sign Up</a>
+                <a id="login" href="/login">Login</a>
+                {% endif %}
+            </nav>
+        </span>
+
+
     </div>
     
     <br>
