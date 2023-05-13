@@ -7,3 +7,13 @@ function deleteCommission(commissionID)
         window.location.href = "/";
     })
 }
+
+function editCommission(commissionID)
+{
+    fetch("/edit-commission", {
+        method: "POST",
+        body: JSON.stringify({ commissionID: commissionID}),
+    }).then((_res) => {
+        window.location.href = "/";
+    })
+}

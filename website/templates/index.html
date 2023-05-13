@@ -9,16 +9,22 @@
 
 <div class="commission-list">
     <center><h3>Your Commissions:</h3></center>  
-    <table>
+    <table style="border-spacing: 15px;">
         <tr>
             {% for commission in user.commissions %}
-            <td style="padding: 10px;">
+            <td style="padding: 10px; background-color: aliceblue;">
                 {{ commission.title }} ${{ commission.price }}
                 <button type="button" onClick="deleteCommission({{ commission.id }})">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <br>
                 {{ commission.description }}
+                <br></br>
+                {{ commission.date }}
+                <br></br>
+                <button type="button" onClick="editCommission({{ commission.id }})">
+                    <span aria-hidden="true">Modify</span>
+                </button>
             </td>
             {% endfor %}
         </tr>

@@ -29,6 +29,7 @@ def home():
 
     return render_template("index.html", user=current_user)
 
+
 @views.route('/delete-commission', methods=['POST'])
 def delete_commission():
     commission = json.loads(request.data)
@@ -38,5 +39,17 @@ def delete_commission():
         if commission.commissioner == current_user.id:
             db.session.delete(commission)
             db.session.commit()
-            
+
+    return jsonify({})
+
+@views.route('/edit-commission', methods=['POST'])
+def edit_commission():
+    commission = json.loads(request.data)
+    commissionID = commission['commissionID']
+    commission = Commission.query.get(commissionID)
+    if commission:
+        if commission.commissioner == current_user.id:
+            # modify
+            print(commission.title)
+
     return jsonify({})
