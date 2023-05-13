@@ -12,10 +12,12 @@
     <center><h3>Your Commissions:</h3></center>
     <ul id="Commissions">
         {% for commission in user.commissions %}
-        <li>{{ commission.title }} $ {{ commission.price }}</li>
-        <button type="button" onClick="deleteCommission({{ commission.id }})">
-            <span aria-hidden="true">&times;</span>
-        </button>
+        <div>
+            <li>{{ commission.title }} $ {{ commission.price }}</li>
+            <button type="button" onClick="deleteCommission({{ commission.id }})">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         {% endfor %}
     </ul>
 </div>

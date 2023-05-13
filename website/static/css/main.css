@@ -22,6 +22,16 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.signup-form {
+    background-color: rgb(206, 124, 126);
+    padding: 20px;
+    position: fixed;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .commission-form {
     background-color: rgb(206, 124, 126);
     padding: 20px;
@@ -37,6 +47,7 @@ body {
     position: fixed;
     top: 70%;
     left: 50%;
+    transform: translate(-70%, -50%);
 }
 
 .error-box{
@@ -70,11 +81,28 @@ body {
     width: 100%;
 }
 
-.flash {
-    background-color: antiquewhite;
+.flash-error {
+    background-color: rgb(255, 75, 75);
+    color: white;
     text-align: center;
     z-index: 2;
     position: fixed;
     width: 100%;
     top: 130px;
+}
+
+.flash-success {
+    background-color: rgb(54, 223, 82);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    top: 130px;
+}
+
+.inputwrap label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
 }

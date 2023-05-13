@@ -45,13 +45,13 @@
             {% for category, message in messages %}
                 {% if category == 'error' %}
                 <!-- Error -->
-                <div class="flash">
+                <div class="flash-error">
                     {{ message }}
                 </div>
 
                 {% else %}
                 <!-- Success -->
-                <div class="flash">
+                <div class="flash-success">
                     {{ message }}
                 </div>
                 {% endif %}
