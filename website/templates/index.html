@@ -13,7 +13,7 @@
         <tr>
             {% for commission in user.commissions %}
             <td style="padding: 10px; background-color: aliceblue;">
-                {{ commission.title }} ${{ commission.price }}
+                {{ commission.title }} ${{ commission.price }} Status: {{ commission.status }}
                 <button type="button" onClick="deleteCommission({{ commission.id }})">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -23,7 +23,7 @@
                 {{ commission.date }}
                 <br></br>
                 <button type="button" onClick="editCommission({{ commission.id }})">
-                    <span aria-hidden="true">Modify</span>
+                    <span aria-hidden="true">Edit</span>
                 </button>
             </td>
             {% endfor %}
@@ -42,9 +42,19 @@
         <label for="price">Price:</label>
         <input type="price" name="price" id="price" placeholder="Integer in USD">
 
+        <br></br>
+
+        <label for="status">Status:</label>
+        <select name="status" id="status">
+            <option value="Not Started">Not Started</option>
+            <option value="Unpaid">Unpaid</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Finished">Finished</option>
+        </select>
+
         <br><br>
 
-        <center><label>Commission Description</label></center>
+        <center><label>Commission Description:</label></center>
         <br>
 
         <textarea name="description" id="description"></textarea>
